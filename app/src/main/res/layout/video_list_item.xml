@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="com.example.videoplayer.utils.CommonUtils" />
+        <variable
+            name="listItem"
+            type="com.example.videoplayer.room.VideoListApiEntity" />
+    </data>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp">
+    
+    <RelativeLayout
+        android:id="@+id/rlThumbNailPlusPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivThumbNail"
+        android:layout_width="90dp"
+        android:layout_height="70dp"
+        app:imageUrl="@{listItem.videos_sources}"
+        tools:src="@color/black" />
+
+    <ImageView
+        android:id="@+id/iv_play_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_play_circle_filled_24"
+        android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_7"
+        android:layout_toEndOf="@id/rlThumbNailPlusPlay"
+        android:layout_toStartOf="@id/ivMoreOptions"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:maxLines="2"
+        android:text="@{listItem.fullName}"
+        android:textColor="@color/black"
+        tools:text="This is a sample title of the video to check if the title works fine" />
+
+    <TextView
+        android:id="@+id/tv_no_of_times_played"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginStart="@dimen/dimen_7"
+        android:layout_marginTop="@dimen/dimen_7"
+        android:layout_toEndOf="@id/rlThumbNailPlusPlay"
+        app:drawableStartCompat="@drawable/ic_baseline_play_arrow_24"
+        tools:text="235" />
+
+    <ImageView
+        android:id="@+id/ivMoreOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_baseline_more_vert_24"/>
+</RelativeLayout>
+</layout>

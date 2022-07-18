@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Video Player</string>
+    <string name="sort_by_last_viewed_desc">Sort by recently viewed</string>
+    <string name="sort_by_most_viewed_desc">Sort by most watched</string>
+    <string name="delete">Delete</string>
+    <string name="add_videos">Add Videos</string>
+    <string name="delete_all">Delete All</string>
+    <string name="minimize">Minimize</string>
+    <string name="no_vids_found">No videos found</string>
+</resources>
