@@ -15,7 +15,7 @@ class VideoRecyclerViewAdapter(
 ) : RecyclerView.Adapter<MyViewHolder>() {
 
     private var videoItemList = ArrayList<VideoListApiEntity>()
-    private var lastPlayedposition: Int = -1
+    var lastPlayedposition: Int = -1
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -59,11 +59,11 @@ class VideoRecyclerViewAdapter(
 
     fun setList(videoList: List<VideoListApiEntity>) {
         videoItemList.clear()
-        if (videoList.size > 0) {
-            videoList.get(0).isPlaying = true
-            videoList.get(0).timesPlayed += 1
-            lastPlayedposition = 0
-        }
+//        if (videoList.size > 0) {
+//            videoList.get(0).isPlaying = true
+//            videoList.get(0).timesPlayed += 1
+//            lastPlayedposition = 0
+//        }
         videoItemList.addAll(videoList)
         this.notifyDataSetChanged()
     }

@@ -30,7 +30,6 @@ import com.google.android.exoplayer2.source.ProgressiveMediaSource
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-//Hello world
 
 class MainActivity : AppCompatActivity(), Player.Listener {
     private var exoVideoPlayer: SimpleExoPlayer? = null
@@ -94,6 +93,9 @@ class MainActivity : AppCompatActivity(), Player.Listener {
                 if (it.size > 0) {
                     currentVideoURL = it.get(0).rating
                     currentVideotitle = it.get(0).fullName
+                    it.get(0).isPlaying = true
+                    it.get(0).timesPlayed += 1
+                    adapter.lastPlayedposition = 0
                     mainViewModel.updateVideoInfoById(it.get(0).timesPlayed, System.currentTimeMillis(), it.get(0).id)
                     playScreenFragment.fragmentPlayScreenBinding.tvTitle.text = currentVideotitle
                     if(isMinimized == true) {
