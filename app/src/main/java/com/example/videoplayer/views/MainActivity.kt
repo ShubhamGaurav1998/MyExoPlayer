@@ -31,6 +31,8 @@ import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+//Sample comment
+
 class MainActivity : AppCompatActivity(), Player.Listener {
     private var exoVideoPlayer: SimpleExoPlayer? = null
     private lateinit var adapter: VideoRecyclerViewAdapter
