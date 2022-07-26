@@ -32,6 +32,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 //Sample comment
+//Sample comment 2
 
 class MainActivity : AppCompatActivity(), Player.Listener {
     private var exoVideoPlayer: SimpleExoPlayer? = null
