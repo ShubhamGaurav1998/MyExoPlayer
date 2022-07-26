@@ -36,6 +36,7 @@ import javax.inject.Inject
 //Sample comment 3
 //Sample comment 4
 //Sample comment 5
+//Sample comment 6
 
 class MainActivity : AppCompatActivity(), Player.Listener {
     private var exoVideoPlayer: SimpleExoPlayer? = null
